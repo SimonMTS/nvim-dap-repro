@@ -1,0 +1,5 @@
+FROM anatolelucet/neovim:stable-ubuntu
+RUN apt update -y
+RUN apt install -y gcc git
+COPY . .
+CMD [ "nvim", "-u", "./config.lua", "./example.go" ]
